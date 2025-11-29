@@ -1,0 +1,23 @@
+User-agent: *
+
+# --- System Directories ---
+Disallow: /styles/
+Disallow: /scripts/
+
+# --- Private Audio Files (Do Not Index) ---
+Disallow: /guerra_al_lardo.mp3
+Disallow: /sei_aumentata_40_kili.mp3
+Disallow: /lardosa_grassa.mp3
+Disallow: /vergogna.mp3
+
+# --- Top Secret Areas (Easter Eggs) ---
+Disallow: /admin/nuclear-codes/
+Disallow: /plans/world-domination/
+Disallow: /database/real-passwords.txt
+Disallow: /kanye-west-private-phone-number/
+
+# Please don't wake up the AI
+Disallow: /ai/sleeping/
+
+# 418 I'm a teapot
+Disallow: /coffee/

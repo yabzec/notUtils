@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NullUtils - Strumenti Indispensabilmente Inutili</title>
+        <link href="./styles/main.css" rel="stylesheet"/>
+        <link href="./styles/elements.css" rel="stylesheet"/>
+        <link href="./styles/earthquake.css" rel="stylesheet"/>
+        <link href="./styles/playground.css" rel="stylesheet"/>
+        <link href="./styles/responsive.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="mobile-header">
+            <h1>!Utils</h1>
+            <p class="subtitle">The most useless web page</p>
+        </div>
+        <div class="playground">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h1>!Utils</h1>
+                    <p class="subtitle">The most useless web page</p>
+                </div>
+                <div class="card">
+                    <h3>Meme Stealer</h3>
+                    <p style="font-size: 0.8em; color: #888; margin-bottom: 10px;">Fresh from Reddit.</p>
+                    <button onclick="exec(this, generateMeme)">Get Meme</button>
+                </div>
+
+                <div class="card">
+                    <h3>Server Cats</h3>
+                    <p style="font-size: 0.8em; color: #888; margin-bottom: 10px;">Debug with kitties.</p>
+                    <button onclick="exec(this, generateHttpCat)">Check Status</button>
+                </div>
+
+                <div class="card">
+                    <h3>Insecure password generator</h3>
+                    <button onclick="exec(this, generateBadPassword)">Genera Password</button>
+                </div>
+
+                <div class="card">
+                    <h3>GIF Dispenser</h3>
+                    <p style="font-size: 0.8em; color: #888; margin-bottom: 10px;">Infinite loops of joy.</p>
+                    <button onclick="exec(this, generateRandomGif)">Gimme GIF</button>
+                </div>
+
+                <div class="card">
+                    <h3>Free random image</h3>
+                    <button onclick="exec(this, randomImage)">Get it now!</button>
+                </div>
+
+                <div class="card">
+                    <h3>Silent observer</h3>
+                    <div class="face-container" style="font-size: 3em; font-family: monospace; height: 100px; display:flex; align-items:center; justify-content:center; color: #fff; gap: 10px;">
+
+                        <span>(</span>
+
+                        <div class="eye-socket">
+                            <div class="eyelid"></div> <div id="eye-left" class="pupil">●</div>
+                        </div>
+
+                        <span>_</span>
+
+                        <div class="eye-socket">
+                            <div class="eyelid"></div> <div id="eye-right" class="pupil">●</div>
+                        </div>
+
+                        <span>)</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Useless facts</h3>
+                    <button onclick="exec(this, getUselessFact)">Get Fact!</button>
+                </div>
+
+                <div class="card">
+                    <h3>Ask the Oracle</h3>
+                    <p style="font-size: 0.8em; color: var(--muted); margin-bottom: 10px;">Think of a question...</p>
+                    <button onclick="exec(this, askOracle)">Consult</button>
+                </div>
+
+                <div class="card">
+                    <h3>Universal Translator</h3>
+                    <button onclick="exec(this, translateSomething)">Translate "Hello"</button>
+                </div>
+
+                <div class="card">
+                    <h3>Budget AI (Free)</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
+                        <input type="text" id="budgetAiQuestion" placeholder="Ask deep questions..."
+                               style="padding: 8px; background: #000; border: 1px solid #333; color: #fff; border-radius: 4px; width: 100%;">
+                    </div>
+                    <button onclick="exec(this, askBudgetAi)" id="budgetAiButton">Consult AI</button>
+                </div>
+
+                <div class="card">
+                    <h3>Corporate Speak</h3>
+                    <p style="font-size: 0.8em; color: #888; margin-bottom: 10px;">Sound smart, say nothing.</p>
+                    <button onclick="exec(this, generateCorporateBS)">Generate Synergy</button>
+                </div>
+
+                <div class="card">
+                    <h3>Do not push me!</h3>
+                    <button class="red-button" onclick="exec(this, doNotPush)">Push me!</button>
+                </div>
+
+                <div class="card">
+                    <h3>Emotional Damage</h3>
+                    <button onclick="exec(this, generateInsult)">Roast Me</button>
+                </div>
+
+                <div class="card">
+                    <h3>Nerd Humor</h3>
+                    <button onclick="exec(this, generateGeekJoke)">sudo make_me_laugh</button>
+                </div>
+
+                <div class="card">
+                    <h3>Instant Regret</h3>
+                    <p style="font-size: 0.8em; color: #888; margin-bottom: 10px;">Warning: Very bad puns.</p>
+                    <button onclick="exec(this, generateDadJoke)">Make me groan</button>
+                </div>
+
+                <div class="card">
+                    <h3>I'm Bored</h3>
+                    <button onclick="exec(this, suggestActivity)">Fix my life</button>
+                </div>
+
+                <div class="card">
+                    <h3>Turn me on</h3>
+                    <label class="switch">
+                        <input type="checkbox" id="lazyToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="card">
+                    <h3>(Loaded) Coin flip</h3>
+                    <button onclick="exec(this, flipCoin)">Heads or tails?</button>
+                </div>
+
+            </div>
+            <div id="results">
+                <div id="messages">
+                </div>
+                <div id="fake_input__container">
+                    <div id="fake_input">></div>
+                </div>
+            </div>
+        </div>
+        <script src="./scripts/utils.js"></script>
+        <script src="./scripts/insicurePass.js"></script>
+        <script src="./scripts/memeDispenser.js"></script>
+        <script src="./scripts/randomGif.js"></script>
+        <script src="./scripts/httpCat.js"></script>
+        <script src="./scripts/corporateBsGenerator.js"></script>
+        <script src="./scripts/dadJokes.js"></script>
+        <script src="./scripts/suggestActivity.js"></script>
+        <script src="./scripts/geekJokeGenerator.js"></script>
+        <script src="./scripts/insultGenerator.js"></script>
+        <script src="./scripts/askBudgetAi.js"></script>
+        <script src="./scripts/uselessFacts.js"></script>
+        <script src="./scripts/translator.js"></script>
+        <script src="./scripts/oracle.js"></script>
+        <script src="./scripts/flipCoin.js"></script>
+        <script src="./scripts/randomImage.js"></script>
+        <script src="./scripts/pupils.js"></script>
+        <script src="./scripts/doNotPush.js"></script>
+        <script>
+            async function exec (elm, method, args) {
+                if (doingSomething) {
+                    showResult("Man, let me finish with this and try again!");
+                    return;
+                }
+
+                if (window.innerWidth <= 900) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+
+                doingSomething = true;
+                try {
+                    if (!args) {
+                        args = [];
+                    }
+                    await method.call(this, elm, ...args);
+                } catch (error) {
+                    sendMessage("System Error: Something exploded internally.");
+                } finally {
+                    doingSomething = false;
+                    if (elm.disabled) elm.disabled = false;
+                }
+            }
+
+            const toggle = document.getElementById('lazyToggle');
+            let counter = 0;
+            const maxCountToggle = getRandomInt(2, 7);
+            toggle.addEventListener('change', function () {
+                if (this.checked) {
+                    counter ++
+                    setTimeout(() => {
+                        this.checked = false;
+                    }, getRandomInt(200, 5000));
+                    if (counter === maxCountToggle) {
+                        counter = 0;
+                        sendMessage("❌ Man, stop...");
+                    }
+                }
+            });
+
+            Array.from(document.getElementsByClassName("image")).forEach((el) => {
+                el.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    el.classList.toggle("active");
+                })
+            });
+        </script>
+    </body>
+</html>
