@@ -75,14 +75,18 @@
                 </div>
 
                 <div class="card">
-                    <h3>Ask the Oracle</h3>
-                    <p style="font-size: 0.8em; color: var(--muted); margin-bottom: 10px;">Think of a question...</p>
-                    <button onclick="exec(this, askOracle)">Consult</button>
+                    <h3>Universal Translator</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
+                        <input type="text" id="translatorInput" placeholder="Enter text..."
+                               style="padding: 8px; background: #000; border: 1px solid #333; color: #fff; border-radius: 4px; width: 100%;">
+                    </div>
+                    <button onclick="exec(this, translateSomething)" id="translatorButton">Translate</button>
                 </div>
 
                 <div class="card">
-                    <h3>Universal Translator</h3>
-                    <button onclick="exec(this, translateSomething)">Translate "Hello"</button>
+                    <h3>Ask the Oracle</h3>
+                    <p style="font-size: 0.8em; color: var(--muted); margin-bottom: 10px;">Think of a question...</p>
+                    <button onclick="exec(this, askOracle)">Consult</button>
                 </div>
 
                 <div class="card">
@@ -205,13 +209,6 @@
                         sendMessage("❌ Man, stop...");
                     }
                 }
-            });
-
-            Array.from(document.getElementsByClassName("image")).forEach((el) => {
-                el.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    el.classList.toggle("active");
-                })
             });
         </script>
     </body>

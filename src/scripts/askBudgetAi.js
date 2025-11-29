@@ -1,14 +1,16 @@
-const input = document.getElementById("budgetAiQuestion");
+const aiInput = document.getElementById("budgetAiQuestion");
 
-input.addEventListener("keyup", evt => {
-    if (evt.keyCode === 13) {
-        const button = document.getElementById("budgetAiButton");
-        exec(button, askBudgetAi);
-    }
-})
+if (translatorInput) {
+    aiInput.addEventListener("keyup", evt => {
+        if (evt.keyCode === 13) {
+            const button = document.getElementById("budgetAiButton");
+            exec(button, askBudgetAi);
+        }
+    });
+}
 
 async function askBudgetAi(btn) {
-    const question = input.value.trim();
+    const question = aiInput.value.trim();
 
     if (!question) {
         await showMessage("Error: Input void detected.");
@@ -62,5 +64,5 @@ async function askBudgetAi(btn) {
     showResult("🤖 BudgetAI: " + finalAnswer);
 
     btn.innerText = originalText;
-    input.value = "";
+    aiInput.value = "";
 }
