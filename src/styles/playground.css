@@ -6,6 +6,7 @@
     justify-content: center;
     gap: 40px;
     flex: 1;
+    padding: 20px;
 }
 
 .dashboard {
@@ -27,7 +28,7 @@
     top: 20px;
     width: 100%;
     max-width: 350px;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 100px);
     max-height: calc(100vh - 40px);
     display: flex;
     flex-direction: column;

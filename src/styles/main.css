@@ -19,7 +19,6 @@ body {
     align-items: start;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
 }
 
 .mobile-header {
@@ -44,4 +43,13 @@ p.subtitle {
     margin: 0 0 5px 0;
     color: var(--muted);
     font-size: 0.9rem;
+}
+
+#footer {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--card-bg);
+    border: none;
+    border-top: 1px solid #333;
+    text-align: right;
 }

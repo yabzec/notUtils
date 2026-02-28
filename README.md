@@ -101,3 +101,6 @@ It's a static site. No `npm install`. No `docker`.
 Distributed under the **WTFPL** (Do What The F\*ck You Want To Public License).
 
 *Disclaimer: No database was actually deleted during the use of the Red Button, and no teleshopping sellers were harmed to obtain the audio files.*
+
+## 👛 Tips
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I61V3CIV)
